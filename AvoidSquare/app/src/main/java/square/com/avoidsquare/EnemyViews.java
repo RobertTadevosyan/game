@@ -10,6 +10,7 @@ import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.LinearInterpolator;
+import android.widget.ImageView;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -21,7 +22,7 @@ import square.com.avoidsquare.Utils.Stopwatch;
  * Created by Robert on 23.01.2017.
  */
 
-public class EnemyViews extends View {
+public class EnemyViews extends ImageView {
 
     private int moveX;
     private int moveY;

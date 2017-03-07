@@ -12,6 +12,7 @@ import android.view.MotionEvent;
 import android.view.TouchDelegate;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import square.com.avoidsquare.Utils.MyApplicaton;
@@ -20,7 +21,7 @@ import square.com.avoidsquare.Utils.MyApplicaton;
  * Created by Robert on 23.01.2017.
  */
 
-public class Gamer extends TextView {
+public class Gamer extends ImageView {
 
     private float gamerX;
     private float gamerY;
@@ -101,10 +102,14 @@ public class Gamer extends TextView {
         }
     };
 
+//    public boolean isBelongToGamer(float x, float y) {
+//        if (gamerY == 0 && gamerX == 0) {
+//            return false;
+//        }
+//        return x > gamerX && x < gamerX + getLayoutParams().width && y > gamerY && y < gamerY + getLayoutParams().height;
+//    }
+
     public boolean isBelongToGamer(float x, float y) {
-        if (gamerY == 0 && gamerX == 0) {
-            return false;
-        }
-        return x > gamerX && x < gamerX + getLayoutParams().width && y > gamerY && y < gamerY + getLayoutParams().height;
+        return Math.pow(getWidth() / 2, 2) >= Math.pow(x - (getX() + getWidth() / 2), 2) + Math.pow(y - (getY() + getHeight() / 2), 2);
     }
 }

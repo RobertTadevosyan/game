@@ -50,18 +50,8 @@ public class MainActivity extends BaseActivity implements GameInterface {
         screenSizes = point;
         borderLength = getResources().getDimension(R.dimen.borderLength);
         configViews(screenSizes);
-        setColorToEnemies();
     }
 
-    private void generateRundomColor() {
-        int[] androidColors = getResources().getIntArray(R.array.androidcolors);
-        colorOfEnemies = androidColors[new Random().nextInt(androidColors.length)];
-    }
-
-    private void generateGamerColor() {
-        int[] androidColors = getResources().getIntArray(R.array.androidcolorsSecond);
-        gamer.setBackgroundColor(androidColors[new Random().nextInt(androidColors.length)]);
-    }
 
     private void screenBarsConfigurations() {
         View decorView = getWindow().getDecorView();
@@ -89,8 +79,6 @@ public class MainActivity extends BaseActivity implements GameInterface {
         enemyViewsThird.setGameOverInterface(this);
         enemyViewsFourth.setGameOverInterface(this);
         gamer.setGameInterface(this);
-        configureViewsSizes(screenSizes);
-        generateGamerColor();
     }
 
     private void onTouchJoyStickActionPerformed(MotionEvent motionEvent) {
@@ -99,28 +87,7 @@ public class MainActivity extends BaseActivity implements GameInterface {
         joyStick.setY(joyStick.getY() - joyStick.getLayoutParams().height / 2 + motionEvent.getY());
     }
 
-    private void setColorToEnemies() {
-        generateRundomColor();
-        enemyViewsFirst.setBackgroundColor(colorOfEnemies);
-        enemyViewsSecond.setBackgroundColor(colorOfEnemies);
-        enemyViewsThird.setBackgroundColor(colorOfEnemies);
-        enemyViewsFourth.setBackgroundColor(colorOfEnemies);
-    }
 
-    private void configureViewsSizes(Point screenSizes) {
-        enemyViewsFirst.getLayoutParams().width = screenSizes.y / 10;
-        enemyViewsFirst.getLayoutParams().height = screenSizes.y / 16;
-        enemyViewsSecond.getLayoutParams().width = screenSizes.y / 14;
-        enemyViewsSecond.getLayoutParams().height = screenSizes.y / 18;
-        enemyViewsThird.getLayoutParams().width = screenSizes.y / 14;
-        enemyViewsThird.getLayoutParams().height = screenSizes.y / 13;
-        enemyViewsFourth.getLayoutParams().width = screenSizes.y / 12;
-        enemyViewsFourth.getLayoutParams().height = screenSizes.y / 18;
-        gamer.getLayoutParams().width = screenSizes.y / 11;
-        gamer.getLayoutParams().height = screenSizes.y / 11;
-        joyStick.getLayoutParams().width = screenSizes.y / 11;
-        joyStick.getLayoutParams().height = screenSizes.y / 11;
-    }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
@@ -166,6 +133,7 @@ public class MainActivity extends BaseActivity implements GameInterface {
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void stop() {
+        gamer.setImageResource(R.drawable.boom);
         joyStick.setOnTouchListener(null);
         gamer.setGameIsPlaying(false);
         checkingHighestScore();
