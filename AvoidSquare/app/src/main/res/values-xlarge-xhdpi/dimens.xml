@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="alert_text_size">35dp</dimen>
+    <dimen name="alert_title_text_size">40dp</dimen>
+    <dimen name="borderLength">40dp</dimen>
+    <dimen name="gamer_top_margin">200dp</dimen>
+
+</resources>

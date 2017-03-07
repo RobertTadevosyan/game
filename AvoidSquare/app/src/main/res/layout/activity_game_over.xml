@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/activity_game_over"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.robert.avoidsquares.GameOverActivity">
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_marginTop="@dimen/alert_title_text_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Game Over"
+        android:gravity="center"
+        android:textSize="@dimen/alert_title_text_size"/>
+
+    <TextView
+        android:id="@+id/message_text_view"
+        android:layout_below="@+id/title_text_view"
+        android:layout_marginTop="@dimen/alert_title_text_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Message"
+        android:gravity="center"
+        android:textSize="@dimen/alert_text_size"/>
+
+    <TextView
+        android:id="@+id/highScoreTextView"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/message_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+    <Button
+        android:id="@+id/new_game_button"
+        android:layout_margin="@dimen/alert_title_text_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Game"
+        android:layout_alignParentBottom="true"
+        android:onClick="newGameButtonOnClick"/>
+</RelativeLayout>

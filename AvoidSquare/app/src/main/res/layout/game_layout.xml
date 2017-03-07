@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <square.com.avoidsquare.EnemyViews
+        android:id="@+id/first"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="20dp"
+        android:background="@android:color/holo_green_light" />
+
+    <square.com.avoidsquare.EnemyViews
+        android:id="@+id/fourth"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@android:color/holo_green_light" />
+
+    <square.com.avoidsquare.EnemyViews
+        android:id="@+id/second"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:background="@android:color/holo_green_light"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"/>
+
+    <square.com.avoidsquare.EnemyViews
+        android:id="@+id/third"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:background="@android:color/holo_green_light"
+        android:layout_above="@+id/view"
+        android:layout_margin="50dp"/>
+
+    <square.com.avoidsquare.Gamer
+        android:id="@+id/gamer"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:color/holo_red_dark"
+        android:gravity="center"
+        android:text="Me"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/third"/>
+</merge>
