@@ -22,7 +22,7 @@ import square.com.avoidsquare.Utils.Stopwatch;
  * Created by Robert on 23.01.2017.
  */
 
-public class EnemyViews extends ImageView {
+public class EnemyViews extends android.support.v7.widget.AppCompatImageView {
 
     private int moveX;
     private int moveY;
@@ -102,7 +102,7 @@ public class EnemyViews extends ImageView {
         if (enemyX < 0 || enemyX + enemyWidth > screenWidth) {
             moveX = -moveX;
         }
-        if (enemyY < 0 || enemyY +enemyHeight > screenHeight/2 ) {
+        if (enemyY < 0 || enemyY + enemyHeight > screenHeight/2 - MainActivity.borderLength / 2 ) {
             moveY = -moveY;
         }
         this.setX(enemyX + moveX);

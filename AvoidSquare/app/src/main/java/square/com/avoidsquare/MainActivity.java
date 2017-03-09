@@ -34,7 +34,7 @@ public class MainActivity extends BaseActivity implements GameInterface {
     private ImageView joyStick;
     private Point screenSizes;
     private int colorOfEnemies;
-    private float borderLength;
+    public static float borderLength;
     private TextView timerTextView;
     private double endTime;
     private Double score;
@@ -110,7 +110,7 @@ public class MainActivity extends BaseActivity implements GameInterface {
     @Override
     public void gameOverBecauseOfOutOfBounds(float gamerX, float gamerY, int gamerWidth, int gamerHeight) {
         if (gamerX <= 0 || gamerX >= screenSizes.x - gamerWidth
-                || gamerY <= 0 || gamerY + gamerHeight + borderLength >= screenSizes.y / 2) {
+                || gamerY <= 0 || gamerY + gamerHeight  >= screenSizes.y / 2 -borderLength / 2) {
             stop();
         }
     }

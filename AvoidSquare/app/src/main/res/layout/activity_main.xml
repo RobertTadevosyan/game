@@ -15,24 +15,15 @@
 
     <square.com.avoidsquare.EnemyViews
         android:id="@+id/first"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="@dimen/first_size"
+        android:layout_height="@dimen/first_size"
         android:layout_margin="20dp"
         android:src="@drawable/thorn_icon_rect"  />
 
     <square.com.avoidsquare.EnemyViews
-        android:id="@+id/fourth"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentRight="true"
-        android:layout_margin="10dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/thorn_icon_rect" />
-
-    <square.com.avoidsquare.EnemyViews
         android:id="@+id/second"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/second_size"
+        android:layout_height="@dimen/second_size"
         android:background="@android:color/transparent"
         android:src="@drawable/thorn_icon_rect"
         android:layout_above="@+id/view"
@@ -41,11 +32,20 @@
 
     <square.com.avoidsquare.EnemyViews
         android:id="@+id/third"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/third_size"
+        android:layout_height="@dimen/third_size"
         android:src="@drawable/thorn_icon_rect"
         android:layout_above="@+id/view"
         android:layout_margin="50dp"/>
+
+    <square.com.avoidsquare.EnemyViews
+        android:id="@+id/fourth"
+        android:layout_width="@dimen/fourth_size"
+        android:layout_height="@dimen/fourth_size"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/thorn_icon_rect" />
 
     <square.com.avoidsquare.Gamer
         android:id="@+id/gamer"

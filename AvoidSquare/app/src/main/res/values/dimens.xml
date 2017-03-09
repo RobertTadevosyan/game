@@ -3,4 +3,8 @@
     <dimen name="alert_title_text_size">25dp</dimen>
     <dimen name="borderLength">20dp</dimen>
     <dimen name="gamer_top_margin">100dp</dimen>
+    <dimen name="first_size">40dp</dimen>
+    <dimen name="second_size">50dp</dimen>
+    <dimen name="third_size">45dp</dimen>
+    <dimen name="fourth_size">25dp</dimen>
 </resources>
